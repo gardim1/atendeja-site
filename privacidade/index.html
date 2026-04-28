@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade — AtendeJá</title>
+    <meta name="description" content="Política de Privacidade do AtendeJá. Como tratamos os dados pessoais dos usuários do nosso painel administrativo e dos pacientes que conversam com nossa IA via WhatsApp.">
+    <meta name="robots" content="index,follow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --ink: #0F172A;
+            --ink-2: #334155;
+            --mute: #64748B;
+            --line: #E2E8F0;
+            --bg: #F8FAFC;
+            --card: #FFFFFF;
+            --primary: #2563EB;
+            --primary-hover: #1D4ED8;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--ink-2);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 48px 24px 96px;
+        }
+
+        header.page-header {
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        header.page-header a.back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            transition: color 150ms ease;
+        }
+
+        header.page-header a.back:hover {
+            color: var(--primary-hover);
+        }
+
+        h1 {
+            color: var(--ink);
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .lead {
+            color: var(--mute);
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .updated {
+            color: var(--mute);
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .toc {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 48px;
+        }
+
+        .toc h2 {
+            color: var(--ink);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+        }
+
+        .toc ol {
+            list-style: none;
+            counter-reset: toc-counter;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 24px;
+        }
+
+        @media (max-width: 600px) {
+            .toc ol { grid-template-columns: 1fr; }
+        }
+
+        .toc ol li {
+            counter-increment: toc-counter;
+            font-size: 14px;
+        }
+
+        .toc ol li::before {
+            content: counter(toc-counter) ". ";
+            color: var(--mute);
+            font-weight: 500;
+        }
+
+        .toc ol li a {
+            color: var(--ink-2);
+            text-decoration: none;
+            transition: color 150ms ease;
+        }
+
+        .toc ol li a:hover {
+            color: var(--primary);
+        }
+
+        section {
+            margin-bottom: 40px;
+            scroll-margin-top: 24px;
+        }
+
+        h2.section-title {
+            color: var(--ink);
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+            margin-bottom: 16px;
+            padding-top: 8px;
+        }
+
+        h3 {
+            color: var(--ink);
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            font-size: 15px;
+        }
+
+        ul, ol.body-list {
+            margin-bottom: 16px;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        ul li, ol.body-list li {
+            margin-bottom: 6px;
+        }
+
+        strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+        }
+
+        .callout {
+            background: #EFF6FF;
+            border-left: 3px solid var(--primary);
+            padding: 14px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        .callout strong {
+            color: var(--primary);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #F1F5F9;
+            color: var(--ink);
+            font-weight: 600;
+            text-align: left;
+            padding: 10px 14px;
+            font-size: 13px;
+        }
+
+        td {
+            padding: 10px 14px;
+            border-top: 1px solid var(--line);
+            vertical-align: top;
+        }
+
+        footer.page-footer {
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid var(--line);
+            color: var(--mute);
+            font-size: 13px;
+            text-align: center;
+        }
+
+        footer.page-footer a {
+            color: var(--mute);
+        }
+
+        footer.page-footer a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header class="page-header">
+            <a href="/" class="back" aria-label="Voltar para a página inicial">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Voltar para o site
+            </a>
+            <h1>Política de Privacidade</h1>
+            <p class="lead">Como tratamos dados pessoais no AtendeJá.</p>
+            <p class="updated">Última atualização: 28 de abril de 2026</p>
+        </header>
+
+        <nav class="toc" aria-label="Índice">
+            <h2>Sumário</h2>
+            <ol>
+                <li><a href="#identificacao">Quem somos</a></li>
+                <li><a href="#dois-publicos">Dois públicos atendidos</a></li>
+                <li><a href="#dados-coletados">Dados coletados</a></li>
+                <li><a href="#finalidades">Por que coletamos</a></li>
+                <li><a href="#bases-legais">Bases legais (LGPD)</a></li>
+                <li><a href="#compartilhamento">Compartilhamento</a></li>
+                <li><a href="#armazenamento">Armazenamento e prazo</a></li>
+                <li><a href="#seguranca">Segurança</a></li>
+                <li><a href="#direitos">Seus direitos</a></li>
+                <li><a href="#cookies">Cookies</a></li>
+                <li><a href="#menores">Menores de idade</a></li>
+                <li><a href="#alteracoes">Alterações nesta política</a></li>
+                <li><a href="#contato">Como nos contatar</a></li>
+            </ol>
+        </nav>
+
+        <section id="identificacao">
+            <h2 class="section-title">1. Quem somos</h2>
+            <p>O <strong>AtendeJá</strong> é um serviço de atendimento automatizado por inteligência artificial via WhatsApp, voltado para clínicas odontológicas e outros pequenos negócios da área de saúde no Brasil.</p>
+            <p>Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e compartilhamos dados pessoais relacionados ao uso do AtendeJá, em conformidade com a <strong>Lei nº 13.709/2018 (Lei Geral de Proteção de Dados — LGPD)</strong>.</p>
+            <p>O AtendeJá é operado por <strong>Vinicius Gardim</strong>, profissional autônomo, com sede operacional em Santana de Parnaíba (Alphaville), São Paulo — Brasil.</p>
+            <div class="callout">
+                <strong>Aviso importante:</strong> O AtendeJá é uma ferramenta operacional. As clínicas que contratam o serviço são as <strong>controladoras</strong> dos dados dos pacientes que conversam pelo WhatsApp delas. O AtendeJá atua como <strong>operador</strong>, processando dados sob orientação da clínica, conforme art. 5º, VII e VIII da LGPD.
+            </div>
+        </section>
+
+        <section id="dois-publicos">
+            <h2 class="section-title">2. Dois públicos atendidos</h2>
+            <p>Esta política se aplica a <strong>dois grupos distintos</strong> de pessoas, com tratamentos diferentes:</p>
+
+            <h3>2.1 Donos de clínica e suas equipes (clientes do AtendeJá)</h3>
+            <p>Profissionais que <strong>contratam</strong> o AtendeJá e usam o painel administrativo. Para esses, somos o controlador direto dos dados, e a base legal é primariamente a execução do contrato.</p>
+
+            <h3>2.2 Pacientes das clínicas (usuários finais)</h3>
+            <p>Pessoas que conversam com a IA do AtendeJá pelo WhatsApp da clínica para agendar, remarcar ou tirar dúvidas. Para esses, atuamos como <strong>operador</strong>, e a clínica que contratou o AtendeJá é a controladora.</p>
+            <p>Pacientes com dúvidas sobre como seus dados são tratados <strong>devem entrar em contato primeiro com a clínica</strong> que os atende. O AtendeJá pode ser acionado em segundo nível, conforme acordado entre clínica e paciente.</p>
+        </section>
+
+        <section id="dados-coletados">
+            <h2 class="section-title">3. Dados coletados</h2>
+
+            <h3>3.1 De donos de clínica e equipes</h3>
+            <ul>
+                <li>Nome completo</li>
+                <li>E-mail comercial</li>
+                <li>Telefone (opcional)</li>
+                <li>CNPJ da clínica</li>
+                <li>Endereço comercial</li>
+                <li>Dados de pagamento (processados por terceiros — não armazenamos número completo de cartão)</li>
+                <li>Logs de acesso ao painel (IP, data, ações realizadas)</li>
+            </ul>
+
+            <h3>3.2 De pacientes</h3>
+            <ul>
+                <li>Nome (informado pelo próprio paciente na conversa)</li>
+                <li>Número de WhatsApp</li>
+                <li>E-mail (apenas se o paciente consentir explicitamente para receber lembretes por e-mail)</li>
+                <li>Histórico de mensagens trocadas com a IA</li>
+                <li>Procedimento de interesse (informado pelo paciente)</li>
+                <li>Data, hora e profissional escolhido para a consulta</li>
+                <li>Status do agendamento (confirmado, remarcado, cancelado)</li>
+            </ul>
+
+            <p><strong>Não coletamos:</strong> documentos de identidade, prontuário médico, dados financeiros do paciente, histórico clínico, exames, prescrições, ou qualquer dado considerado sensível pela LGPD (art. 5º, II), salvo se o próprio paciente os informar voluntariamente na conversa — caso em que a clínica é a única responsável pela retenção desses dados.</p>
+        </section>
+
+        <section id="finalidades">
+            <h2 class="section-title">4. Por que coletamos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 35%">Finalidade</th>
+                        <th>Detalhes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prestação do serviço</td>
+                        <td>Atender pacientes via WhatsApp, agendar consultas, enviar lembretes, fazer reativação de inativos.</td>
+                    </tr>
+                    <tr>
+                        <td>Operação do painel</td>
+                        <td>Permitir que donos de clínica visualizem conversas, agenda, métricas e configurações.</td>
+                    </tr>
+                    <tr>
+                        <td>Cobrança e billing</td>
+                        <td>Emitir cobranças mensais e gerenciar planos contratados.</td>
+                    </tr>
+                    <tr>
+                        <td>Comunicação operacional</td>
+                        <td>Enviar relatórios semanais, avisos de uso, notificações de sistema.</td>
+                    </tr>
+                    <tr>
+                        <td>Melhoria do serviço</td>
+                        <td>Analisar padrões de uso de forma agregada e anonimizada para melhorar o produto.</td>
+                    </tr>
+                    <tr>
+                        <td>Cumprimento legal</td>
+                        <td>Cumprir obrigações legais, fiscais, regulatórias e judiciais quando aplicáveis.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="bases-legais">
+            <h2 class="section-title">5. Bases legais (LGPD art. 7º)</h2>
+            <ul>
+                <li><strong>Execução do contrato</strong> (art. 7º, V) — para tudo relacionado à prestação do serviço contratado pela clínica.</li>
+                <li><strong>Consentimento</strong> (art. 7º, I) — para o paciente receber lembretes por e-mail (sempre opcional).</li>
+                <li><strong>Legítimo interesse</strong> (art. 7º, IX) — para análise de uso agregada, prevenção a fraude e segurança do sistema.</li>
+                <li><strong>Cumprimento de obrigação legal</strong> (art. 7º, II) — quando dados precisam ser fornecidos a autoridades.</li>
+            </ul>
+        </section>
+
+        <section id="compartilhamento">
+            <h2 class="section-title">6. Compartilhamento</h2>
+            <p>Não vendemos dados. Compartilhamos apenas com prestadores essenciais para o funcionamento do serviço:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 30%">Parceiro</th>
+                        <th style="width: 35%">Função</th>
+                        <th>Localização dos dados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Meta Platforms / WhatsApp</td>
+                        <td>Envio e recebimento de mensagens via WhatsApp Business API</td>
+                        <td>Servidores Meta (transferência internacional)</td>
+                    </tr>
+                    <tr>
+                        <td>OpenAI</td>
+                        <td>Processamento das respostas da IA</td>
+                        <td>Servidores OpenAI (EUA — transferência internacional sob cláusulas contratuais)</td>
+                    </tr>
+                    <tr>
+                        <td>Railway / Supabase</td>
+                        <td>Hospedagem do banco de dados e da aplicação</td>
+                        <td>Servidores nos EUA (us-west)</td>
+                    </tr>
+                    <tr>
+                        <td>Google</td>
+                        <td>Integração com Google Calendar (opcional)</td>
+                        <td>Servidores Google</td>
+                    </tr>
+                    <tr>
+                        <td>Resend</td>
+                        <td>Envio de e-mails transacionais</td>
+                        <td>Servidores Resend (EUA)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Todas as transferências internacionais são protegidas por contratos com cláusulas padrão de proteção de dados, conforme art. 33, II da LGPD.</p>
+        </section>
+
+        <section id="armazenamento">
+            <h2 class="section-title">7. Armazenamento e prazo de retenção</h2>
+            <ul>
+                <li><strong>Dados de cliente ativo:</strong> mantidos enquanto o contrato estiver vigente.</li>
+                <li><strong>Dados após cancelamento:</strong> mantidos por até 90 dias para reconciliação financeira, depois anonimizados ou excluídos.</li>
+                <li><strong>Logs técnicos:</strong> mantidos por até 12 meses para fins de segurança e auditoria.</li>
+                <li><strong>Dados de paciente:</strong> mantidos enquanto a clínica controladora autorizar. A clínica pode solicitar exclusão a qualquer momento.</li>
+                <li><strong>Dados sob obrigação legal/fiscal:</strong> mantidos pelos prazos exigidos pela legislação brasileira (ex.: 5 anos para fins fiscais).</li>
+            </ul>
+        </section>
+
+        <section id="seguranca">
+            <h2 class="section-title">8. Segurança</h2>
+            <p>Aplicamos medidas técnicas e organizacionais razoáveis para proteger os dados:</p>
+            <ul>
+                <li>Conexões via HTTPS/TLS</li>
+                <li>Senhas armazenadas com hash criptográfico</li>
+                <li>Tokens de acesso a APIs externas criptografados em repouso</li>
+                <li>Acesso ao painel restrito por autenticação</li>
+                <li>Backups automáticos do banco de dados</li>
+                <li>Logs de acesso para auditoria</li>
+            </ul>
+            <p>Apesar dos esforços, nenhum sistema é 100% imune a incidentes. Em caso de incidente que possa causar risco relevante aos titulares, comunicaremos os afetados e a ANPD nos prazos previstos pelo art. 48 da LGPD.</p>
+        </section>
+
+        <section id="direitos">
+            <h2 class="section-title">9. Seus direitos</h2>
+            <p>Conforme o art. 18 da LGPD, você tem direito a:</p>
+            <ul>
+                <li>Confirmação de que tratamos seus dados</li>
+                <li>Acesso aos dados</li>
+                <li>Correção de dados incompletos, inexatos ou desatualizados</li>
+                <li>Anonimização, bloqueio ou eliminação de dados desnecessários</li>
+                <li>Portabilidade dos dados</li>
+                <li>Eliminação dos dados tratados com base em consentimento</li>
+                <li>Informação sobre com quem compartilhamos seus dados</li>
+                <li>Revogação do consentimento</li>
+                <li>Oposição a tratamento</li>
+            </ul>
+            <p>Para exercer qualquer desses direitos, escreva para <a href="mailto:contato@atendeja.com.br">contato@atendeja.com.br</a>. Respondemos em até 15 dias úteis.</p>
+        </section>
+
+        <section id="cookies">
+            <h2 class="section-title">10. Cookies e tecnologias similares</h2>
+            <p>Usamos cookies estritamente necessários para o funcionamento do painel (sessão autenticada, preferências de exibição como modo escuro). Não usamos cookies de marketing ou rastreamento publicitário.</p>
+        </section>
+
+        <section id="menores">
+            <h2 class="section-title">11. Menores de idade</h2>
+            <p>O AtendeJá não é direcionado a menores de 18 anos. Quando uma clínica nos contrata e atende menores, é responsabilidade da clínica obter o consentimento dos responsáveis legais conforme o art. 14 da LGPD.</p>
+        </section>
+
+        <section id="alteracoes">
+            <h2 class="section-title">12. Alterações nesta política</h2>
+            <p>Podemos atualizar esta política periodicamente. Mudanças relevantes serão comunicadas com pelo menos 15 dias de antecedência por e-mail aos clientes ativos. A data da última atualização aparece no topo desta página.</p>
+        </section>
+
+        <section id="contato">
+            <h2 class="section-title">13. Como nos contatar</h2>
+            <p>Para qualquer dúvida sobre esta política ou sobre como tratamos seus dados:</p>
+            <ul>
+                <li><strong>E-mail:</strong> <a href="mailto:contato@atendeja.com.br">contato@atendeja.com.br</a></li>
+                <li><strong>Localização:</strong> Santana de Parnaíba (Alphaville), São Paulo — Brasil</li>
+            </ul>
+            <p>Em caso de não atendimento satisfatório, você pode contatar a Autoridade Nacional de Proteção de Dados (ANPD) em <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">gov.br/anpd</a>.</p>
+        </section>
+
+        <footer class="page-footer">
+            <p>© 2026 AtendeJá. Todos os direitos reservados.</p>
+            <p style="margin-top: 8px;"><a href="/">atendeja.com.br</a></p>
+        </footer>
+
+    </div>
+</body>
+</html>
